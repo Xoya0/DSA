@@ -1,0 +1,9 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        finder = defaultdict()
+        for i, num in enumerate(nums):
+            if target - num in finder:
+                return [finder[target - num],i ]
+            finder[num] = i
+        return [-1, -1]
+            
